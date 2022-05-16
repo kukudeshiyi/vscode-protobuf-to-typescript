@@ -4,7 +4,7 @@
 	"description": "vscode plugin aims to take protobuf convert to typescript ",
 	"version": "0.0.1",
 	"icon": "icon.png",
-	"publisher": "yi.shi",
+	"publisher": "yishi",
 	"engines": {
 		"vscode": "^1.67.0"
 	},
