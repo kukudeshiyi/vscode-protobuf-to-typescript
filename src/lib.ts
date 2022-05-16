@@ -1,9 +1,9 @@
 import { window } from "vscode";
-import * as copyPaste from "copy-paste";
+import clipboard from 'clipboardy';
 
 export function getClipboardText() {
   try {
-    return Promise.resolve(copyPaste.paste());
+    return Promise.resolve(clipboard.readSync());
   } catch (error) {
     return Promise.reject(error);
   }
