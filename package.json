@@ -11,6 +11,10 @@
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:kukudeshiyi/vscode-protobuf-to-typescript.git"
+	},
 	"activationEvents": [
 		"onCommand:pbToTypescript.fromSelection",
 		"onCommand:pbToTypescript.fromClipboard"
