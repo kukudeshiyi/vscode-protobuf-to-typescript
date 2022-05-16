@@ -1,0 +1,58 @@
+{
+	"name": "vscode-protobuf-to-typescript",
+	"displayName": "protobuf-to-typescript",
+	"description": "vscode plugin aims to take protobuf convert to typescript ",
+	"version": "0.0.1",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:pbToTypescript.fromSelection",
+		"onCommand:pbToTypescript.fromClipboard"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "pbToTypescript.fromSelection",
+				"title": "pb to ts(from selection)",
+				"category": "PbToTs"
+			},
+			{
+				"command": "pbToTypescript.fromClipboard",
+				"title": "pb to ts(from clipboard)",
+				"category": "PbToTs"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/copy-paste": "^1.1.30",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.67.0",
+		"@typescript-eslint/eslint-plugin": "^5.12.1",
+		"@typescript-eslint/parser": "^5.12.1",
+		"@vscode/test-electron": "^2.1.2",
+		"eslint": "^8.9.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.2.1",
+		"typescript": "^4.5.5"
+	},
+	"dependencies": {
+		"@pbts/core": "^2.0.2",
+		"copy-paste": "^1.3.0"
+	}
+}
